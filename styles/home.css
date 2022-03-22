@@ -1,0 +1,79 @@
+#home {
+    background-color: #263633;
+    color: var(--second-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#home-id {
+    position: absolute;
+    top: -5em;
+    width: 5em;
+    height: 5em;
+}
+
+#home .img-car-container {
+    width: 100%;
+}
+
+#home .img-car-container .home-img {
+    width: 100%;
+    mask-image: linear-gradient(to top, transparent, #263633);
+}
+
+#home .container {
+    min-height: 20em;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#home .title-container {
+    position: absolute;
+    top: -2em;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#home .container .title-container .little-title {
+    font-size: clamp(1.5em, 3vw, 2.5em);
+}
+
+#home .container .title-container .title {
+    font-size: clamp(1.6em, 3vw, 6vw);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#home .container .title-container .title h1:nth-child(1) {
+    align-self: center;
+    text-align: center;
+    line-height: 1em;
+}
+
+#home .container .title-container .title h1:nth-child(2) {
+    align-self: center;
+    color: var(--main-color)
+}
+
+#home .container .title-container .btn-get-started {
+    transition: 550ms;
+    font-weight: 600;
+}
+
+#home .container .title-container .btn-get-started:hover {
+    background: var(--second-color);
+    color: var(--main-color);
+}
+
+@media (min-width: 1000px) {
+    #home .container {
+        min-height: 25em;
+    }
+}

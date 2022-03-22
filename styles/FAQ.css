@@ -1,0 +1,10 @@
+#our-team {
+    position: relative;
+}
+
+#our-team-id {
+    position: absolute;
+    top: -5em;
+    width: 5em;
+    height: 5em;
+}
