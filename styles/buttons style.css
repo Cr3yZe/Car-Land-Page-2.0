@@ -6,4 +6,42 @@
     margin-top: 2em;
     padding: .7em;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.btn-container::before {
+    content: '';
+    width: 30px;
+    height: 300px;
+    background: var(--second-color);
+    box-shadow: 0 0 10px 0 #AAA;
+    position: absolute;
+    transform: translateX(-140px) translateY(-150px) rotate(15deg);
+    transition: 650ms;
+}
+
+.btn-container::after {
+    content: '';
+    width: 30px;
+    height: 300px;
+    background: var(--second-color);
+    box-shadow: 0 0 10px 0 #AAA;
+    position: absolute;
+    transform: translateX(-190px) translateY(-150px) rotate(15deg);
+    transition: 650ms;
+}
+
+.btn-container:hover {
+    background: var(--second-color);
+    color: var(--main-color);
+}
+
+.btn-container:hover::before {
+    transform: translateX(200px) translateY(-150px) rotate(15deg);
+}
+
+.btn-container:hover::after {
+    transform: translate(150px) translateY(-150px) rotate(15deg);
+}
+

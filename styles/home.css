@@ -67,11 +67,6 @@
     font-weight: 600;
 }
 
-#home .container .title-container .btn-get-started:hover {
-    background: var(--second-color);
-    color: var(--main-color);
-}
-
 @media (min-width: 1000px) {
     #home .container {
         min-height: 25em;
