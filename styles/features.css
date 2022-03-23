@@ -25,7 +25,7 @@
 
 #features .features-container .title-features h3 {
     color: var(--main-color);
-    font-size: clamp(1.5em, 2vw, 3em)
+    font-size: clamp(1.5em, 2vw, 3em);
 }
 
 #features .features-container .title-features h2 {
@@ -62,6 +62,60 @@
     font-weight: 400;
 }
 
+#features .discover-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#features .discover-container .img-container {
+    padding: .7em;
+}
+
+#features .discover-container .text-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#features .discover-container .text-container .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#features .discover-container .text-container .title-container .title {
+    display: flex;
+    flex-direction: column;
+}
+
+#features .discover-container .text-container .title-container .title h3 {
+    color: var(--main-color);
+    font-size: clamp(1.5em, 2vw, 3em);
+}
+
+#features .discover-container .text-container .title-container .title h2 {
+    font-size: clamp(2.3em, 5vw, 6em);
+    line-height: 1em;
+}
+
+#features .discover-container .text-container .title-container h4 {
+    color: #111;
+    font-weight: 400;
+    font-size: clamp(1.7em, 3vw, 4em);
+}
+
+#features .discover-container .text-container .content-container {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+#features .discover-container .text-container .content-container p {
+    font-size: clamp(1.1em, 2.5vw, 3em);
+}
+
 @media (min-width: 600px) {
     #features .features-container .number-features {
         flex-direction: row;
@@ -73,6 +127,30 @@
         width: 4px;
         min-height: 100%;
         background: var(--main-color);
+    }
+}
+
+@media (min-width: 1000px) {
+    #features .discover-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #features .discover-container .img-container {
+        grid-column: 1 / 2;
+        align-self: stretch;
+    }
+
+    #features .discover-container .img-container img {
+        min-height: 100%;
+    }
+
+    #features .discover-container .text-container {
+        grid-column: 2 / 3;
+    }
+
+    #features .discover-container .text-container .content-container p {
+        font-size: 1.3em;
     }
 }
 
