@@ -8,3 +8,92 @@
     width: 5em;
     height: 5em;
 }
+
+#features .features-container {
+    padding: clamp(2em, 3vw, 6em);
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin-bottom: 2em;
+}
+
+#features .features-container .title-features {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+#features .features-container .title-features h3 {
+    color: var(--main-color);
+    font-size: clamp(1.5em, 2vw, 3em)
+}
+
+#features .features-container .title-features h2 {
+    font-size: clamp(2.3em, 5vw, 6em);
+    line-height: 1em;
+}
+
+#features .features-container .title-features p {
+    margin-top: 1.5em;
+    color: var(--text-color);
+}
+
+#features .features-container .number-features {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+#features .features-container .number-features .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5em;
+}
+
+#features .features-container .number-features .features h3 {
+    font-size: clamp(2.5em, 3.5vw, 5em);
+    font-weight: 999;
+}
+
+#features .features-container .number-features .features h4 {
+    color: var(--text-color);
+    font-size: clamp(1.2em, 2vw, 4em);
+    font-weight: 400;
+}
+
+@media (min-width: 600px) {
+    #features .features-container .number-features {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    #features .features-container .number-features .red-line {
+        width: 4px;
+        min-height: 100%;
+        background: var(--main-color);
+    }
+}
+
+@media (min-width: 1100px) {
+    #features .features-container .number-features .features {
+        padding: 1em;
+        flex-direction: row;
+        gap: .6em;
+    }
+
+    #features .features-container .number-features .features h3 {
+        font-size: 3em;
+    }
+
+    #features .features-container .number-features .features h4 {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 1200px) {
+    #features .features-container .number-features .features h4 {
+        font-size: 2em;
+    }
+}
