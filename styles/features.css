@@ -119,7 +119,6 @@
 }
 
 #features .gallery-container {
-    border: 2px solid red;
     padding: 1em;
 }
 
@@ -158,7 +157,6 @@
 #features .gallery-container .images-gallery-container .arrows-container{
     min-width: 100%;
     min-height: 100%;
-    border: 1px solid red;
     position: absolute;
     z-index: 999;
 }
