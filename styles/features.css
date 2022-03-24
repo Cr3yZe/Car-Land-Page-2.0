@@ -1,5 +1,7 @@
 #features {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #features-id {
@@ -114,6 +116,66 @@
 
 #features .discover-container .text-container .content-container p {
     font-size: clamp(1.1em, 2.5vw, 3em);
+}
+
+#features .gallery-container {
+    border: 2px solid red;
+    padding: 1em;
+}
+
+#features .gallery-container .innovation-container {
+    background: var(--main-color);
+    padding: 3em 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#features .gallery-container .innovation-container h2 {
+    text-transform: uppercase;
+    font-size: clamp(2.1em, 4vw, 4em);
+    color: var(--second-color);
+}
+
+#features .gallery-container .innovation-container h4 {
+    font-size: clamp(1.5em, 1.5vw, 3em);
+    color: var(--second-color);
+}
+
+#features .gallery-container .images-gallery-container {
+    position: relative;
+    display: flex;
+}
+
+#features .gallery-container .images-gallery-container img {
+    display: none;
+}
+
+#features .gallery-container .images-gallery-container img:nth-child(1) {
+    display: block;
+}
+
+#features .gallery-container .images-gallery-container .arrows-container{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 2.5em;
+    z-index: 999;
+}
+
+#features .gallery-container .images-gallery-container .arrows-container .left-arrow {
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    transform: scale(3);
+}
+
+#features .gallery-container .images-gallery-container .arrows-container .right-arrow {
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    transform: scale(3);
 }
 
 @media (min-width: 600px) {

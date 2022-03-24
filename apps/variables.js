@@ -14,3 +14,5 @@ const upLineFixed = document.getElementById('line-up-fixed');
 const middleLineFixed = document.getElementById('line-middle-fixed');
 const downLineFixed = document.getElementById('line-down-fixed');
 const menuFixed = document.getElementById('menu-fixed');
+
+const slideshow = document.getElementById('slideshow');
