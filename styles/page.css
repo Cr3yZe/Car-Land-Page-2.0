@@ -22,3 +22,9 @@ html {
 body {
     font-family: var(--main-font);
 }
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}

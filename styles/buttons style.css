@@ -7,6 +7,8 @@
     padding: .7em;
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -15,9 +17,10 @@
     width: 30px;
     height: 300px;
     background: var(--second-color);
-    box-shadow: 0 0 10px 0 #AAA;
+    box-shadow: 0 0 5px 0 #AAA;
+    opacity: .8;
     position: absolute;
-    transform: translateX(-140px) translateY(-150px) rotate(15deg);
+    transform: translateX(-150px) translateY(-150px) rotate(-15deg);
     transition: 650ms;
 }
 
@@ -26,10 +29,11 @@
     width: 30px;
     height: 300px;
     background: var(--second-color);
-    box-shadow: 0 0 10px 0 #AAA;
+    opacity: .8;
+    box-shadow: 0 0 5px 0 #AAA;
     position: absolute;
-    transform: translateX(-190px) translateY(-150px) rotate(15deg);
-    transition: 650ms;
+    transform: translateX(-220px) translateY(-150px) rotate(-15deg);
+    transition: 750ms;
 }
 
 .btn-container:hover {
@@ -38,10 +42,10 @@
 }
 
 .btn-container:hover::before {
-    transform: translateX(200px) translateY(-150px) rotate(15deg);
+    transform: translateX(200px) translateY(-150px) rotate(-15deg);
 }
 
 .btn-container:hover::after {
-    transform: translate(150px) translateY(-150px) rotate(15deg);
+    transform: translate(150px) translateY(-150px) rotate(-15deg);
 }
 

@@ -9,7 +9,7 @@
     position: absolute;
     display: grid;
     grid-template-columns: 1fr auto;
-    z-index: 999;
+    z-index: 9999;
 }
 
 #navigation #logo {
@@ -188,6 +188,7 @@
     align-self: center;
     justify-content: center;
     transition: 450ms;
+    z-index: 9999;
 }
 
 #navigation-fixed #btn-menu-toggle-fixed:hover {
