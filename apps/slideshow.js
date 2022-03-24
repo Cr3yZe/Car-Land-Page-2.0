@@ -20,6 +20,15 @@ function showPhoto (x) {
     let images = document.getElementsByClassName('slideshow-image');
 
     for (let i = 0; i < images.length; i++) {
-        iamges[i].style.display = 'none';
+        images[i].style.display = 'none';
     }
+
+    if (x < 1) {
+        lastImage = 6;
+    }
+    if (x > images.length) {
+        lastImage = 1;
+    }
+    
+    images[lastImage-1].style.display = 'block';
 }
