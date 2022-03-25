@@ -1,4 +1,4 @@
-const arrowsContainer = slideshow.children[6];
+const arrowsContainer = slideshow.children[5];
 console.log(arrowsContainer);
 
 let lastImage = 1;
@@ -24,7 +24,7 @@ function showPhoto (x) {
     }
 
     if (x < 1) {
-        lastImage = 6;
+        lastImage = 5;
     }
     if (x > images.length) {
         lastImage = 1;
