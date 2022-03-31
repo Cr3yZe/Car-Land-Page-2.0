@@ -8,3 +8,76 @@
     width: 5em;
     height: 5em;
 }
+
+#colors .title-colors-container {
+    border: 1px solid red;
+    padding: 1em;
+}
+
+#colors .title-colors-container h3 {
+    color: var(--main-color);
+    font-size: clamp(1.5em, 2vw, 3em);
+}
+
+#colors .title-colors-container h2 {
+    font-size: clamp(2.3em, 5vw, 6em);
+}
+
+#colors .title-colors-container p {
+    color: var(--text-color);
+    font-size: clamp(1.1em, 2vw, 1.4em);
+}
+
+#colors .color-bubbles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+#colors .color-bubbles-container .bubble-shape {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#colors .car-colors-container .white-bubble {
+    background-color: #FFFFFF;
+}
+
+#colors .car-colors-container .light-gray-bubble {
+    background-color: #787E80;
+}
+
+#colors .car-colors-container .gray-bubble {
+    background-color: #313538;
+}
+
+#colors .car-colors-container .black-bubble {
+    background-color: #070707;
+}
+
+#colors .car-colors-container .blue-bubble {
+    background-color: #162757;
+}
+
+#colors .car-colors-container .mat-blue-bubble {
+    background-color: #273C6E;
+}
+
+#colors .car-colors-container .dark-blue-bubble {
+    background-color: #0B1327;
+}
+
+#colors .car-colors-container .red-bubble {
+    background-color: #500C17;
+}
+
+#colors .car-colors-container .orange-bubble {
+    background-color: #A23915;
+}
+
+#colors .car-colors-container .grass-bubble {
+    background-color: #2A301A
+}
