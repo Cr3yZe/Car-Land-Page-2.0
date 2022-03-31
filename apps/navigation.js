@@ -341,7 +341,6 @@ function allNavigationFunctions () {
 
     function closeMenu () {
         window.addEventListener('resize', () => {
-            console.log(window.innerWidth);
             if (window.innerWidth >= 1000) {
                 if (!menu.classList.contains('hidde')) {
                     menu.classList.add('hidde');

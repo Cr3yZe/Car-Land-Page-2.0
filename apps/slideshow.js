@@ -1,5 +1,4 @@
 const arrowsContainer = slideshow.children[5];
-console.log(arrowsContainer);
 
 let lastImage = 1;
 showPhoto(lastImage);

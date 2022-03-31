@@ -10,8 +10,10 @@
 }
 
 #colors .title-colors-container {
-    border: 1px solid red;
-    padding: 1em;
+    padding: clamp(1em, 4vw, 5em);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #colors .title-colors-container h3 {
@@ -28,56 +30,124 @@
     font-size: clamp(1.1em, 2vw, 1.4em);
 }
 
-#colors .color-bubbles-container {
+#colors .car-colors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#colors .car-colors-container .car-container {
+    position: relative;
+}
+
+#colors .car-colors-container .car-container .car-images-container .image {
+    position: absolute;
+    transition: 250ms;
+}
+
+#colors .car-colors-container .car-container i {
+    border-radius: 50%;
+    transform: scale(3, 3);
+    transition: 250ms;
+}
+
+#colors .car-colors-container .car-container i:hover {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+
+#colors .car-colors-container .car-container .left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 2em;
+}
+
+#colors .car-colors-container .car-container .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 2em;
+}
+
+#colors .car-colors-container .color-bubbles-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
 }
 
-#colors .color-bubbles-container .bubble-shape {
+#colors .car-colors-container .color-bubbles-container .bubble-shape {
     width: 50px;
     height: 50px;
     border: 2px solid black;
     border-radius: 50%;
 }
 
-#colors .car-colors-container .white-bubble {
+#colors .car-colors-container .color-bubbles-container .selected-bubble {
+    outline: 3px solid var(--main-color);
+    outline-offset: 3px;
+}
+
+#colors .car-colors-container .color-bubbles-container .white-bubble {
     background-color: #FFFFFF;
 }
 
-#colors .car-colors-container .light-gray-bubble {
+#colors .car-colors-container .color-bubbles-container .light-gray-bubble {
     background-color: #787E80;
 }
 
-#colors .car-colors-container .gray-bubble {
+#colors .car-colors-container .color-bubbles-container .gray-bubble {
     background-color: #313538;
 }
 
-#colors .car-colors-container .black-bubble {
+#colors .car-colors-container .color-bubbles-container .black-bubble {
     background-color: #070707;
 }
 
-#colors .car-colors-container .blue-bubble {
+#colors .car-colors-container .color-bubbles-container .blue-bubble {
     background-color: #162757;
 }
 
-#colors .car-colors-container .mat-blue-bubble {
+#colors .car-colors-container .color-bubbles-container .mat-blue-bubble {
     background-color: #273C6E;
 }
 
-#colors .car-colors-container .dark-blue-bubble {
+#colors .car-colors-container .color-bubbles-container .dark-blue-bubble {
     background-color: #0B1327;
 }
 
-#colors .car-colors-container .red-bubble {
+#colors .car-colors-container .color-bubbles-container .red-bubble {
     background-color: #500C17;
 }
 
-#colors .car-colors-container .orange-bubble {
+#colors .car-colors-container .color-bubbles-container .orange-bubble {
     background-color: #A23915;
 }
 
-#colors .car-colors-container .grass-bubble {
+#colors .car-colors-container .color-bubbles-container .grass-bubble {
     background-color: #2A301A
+}
+
+@media (min-width: 850px) {
+    #colors .car-colors-container .car-container .left-arrow {
+        left: 3em;
+    }
+    
+    #colors .car-colors-container .car-container .right-arrow {
+        right: 3em;
+    }
+}
+
+@media (min-width: 1200px) {
+    #colors .car-colors-container {
+        max-width: 70em;
+        margin: auto;
+    }
+
+    #colors .car-colors-container .car-container .left-arrow {
+        left: 6em;
+    }
+    
+    #colors .car-colors-container .car-container .right-arrow {
+        right: 6em;
+    }
 }
