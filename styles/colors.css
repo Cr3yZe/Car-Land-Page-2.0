@@ -11,6 +11,7 @@
 
 #colors .title-colors-container {
     padding: clamp(1em, 4vw, 5em);
+    line-height: 2em;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -19,10 +20,12 @@
 #colors .title-colors-container h3 {
     color: var(--main-color);
     font-size: clamp(1.5em, 2vw, 3em);
+    text-transform: uppercase;
 }
 
 #colors .title-colors-container h2 {
     font-size: clamp(2.3em, 5vw, 6em);
+    text-transform: uppercase;
 }
 
 #colors .title-colors-container p {
@@ -67,6 +70,14 @@
     right: 2em;
 }
 
+#colors .car-colors-container .car-container .left-arrow:hover {
+    cursor: pointer;
+}
+
+#colors .car-colors-container .car-container .right-arrow:hover {
+    cursor: pointer;
+}
+
 #colors .car-colors-container .color-bubbles-container {
     position: relative;
     display: flex;
@@ -80,6 +91,10 @@
     height: 50px;
     border: 2px solid black;
     border-radius: 50%;
+}
+
+#colors .car-colors-container .color-bubbles-container .bubble-shape:hover {
+    cursor: pointer;
 }
 
 #colors .car-colors-container .color-bubbles-container .selected-bubble {

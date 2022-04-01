@@ -1,4 +1,6 @@
 #specs {
+    background-color: #EEE;
+    padding: clamp(1em, 4vw, 5em);
     position: relative;
 }
 
@@ -7,4 +9,87 @@
     top: -5em;
     width: 5em;
     height: 5em;
+}
+
+#specs .title-specs {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+#specs .title-specs h3 {
+    color: var(--main-color);
+    font-size: clamp(1.5em, 2vw, 3em);
+    text-transform: uppercase;
+}
+
+#specs .title-specs h2 {
+    color: var(--third-color);
+    font-size: clamp(2.3em, 5vw, 6em);
+    text-transform: uppercase;
+}
+
+#specs .choose-container .choice-container {
+    border: 2px solid #DD0707;
+    display: flex;
+    justify-content: space-between;
+}
+
+#specs .choose-container .choice-container div {
+    padding: .5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#specs .choose-container .choice-container i {
+    margin-right: 1em;
+    transform: scale(2.5);
+    align-self: center;
+}
+
+#specs .choose-container .all-choices {
+    max-height: 0;
+    overflow: hidden;
+    transition: 550ms ease-in-out;
+}
+
+#specs .choose-container .hidden {
+    max-height: 24em;
+}
+
+#specs .choose-container .all-choices .choice {
+    border-bottom: 1px solid #555;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+    padding: .5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#specs .choose-container .all-choices .choice:first-child {
+    border-top: 1px solid #555;
+}
+
+#specs .specs-tables-container .specs-container h3 {
+    margin: .8em 0;
+    font-size: 1.7em;
+}
+
+#specs .specs-tables-container .specs-container .specification-container .row {
+    border-bottom: 1px solid #555;
+    padding: .6em 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+}
+
+#specs .specs-tables-container .specs-container .specification-container .row:last-child {
+    border-bottom: none;
+}
+
+#specs .specs-tables-container .specs-container .specification-container .row div {
+    color: var(--text-color);
 }

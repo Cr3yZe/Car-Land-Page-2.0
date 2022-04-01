@@ -29,11 +29,13 @@
 #features .features-container .title-features h3 {
     color: var(--main-color);
     font-size: clamp(1.5em, 2vw, 3em);
+    text-transform: uppercase;
 }
 
 #features .features-container .title-features h2 {
     font-size: clamp(2.3em, 5vw, 6em);
     line-height: 1em;
+    text-transform: uppercase;
 }
 
 #features .features-container .title-features p {
@@ -51,18 +53,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 2.5em;
+    line-height: 2em;
 }
 
 #features .features-container .number-features .features h3 {
     font-size: clamp(2.5em, 3.5vw, 5em);
     font-weight: 999;
+    text-transform: uppercase;
 }
 
 #features .features-container .number-features .features h4 {
     color: var(--text-color);
     font-size: clamp(1.2em, 2vw, 4em);
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 #features .discover-container {
@@ -90,11 +94,13 @@
 #features .discover-container .text-container .title-container .title {
     display: flex;
     flex-direction: column;
+    line-height: 2em;
 }
 
 #features .discover-container .text-container .title-container .title h3 {
     color: var(--main-color);
     font-size: clamp(1.5em, 2vw, 3em);
+    text-transform: uppercase;
 }
 
 #features .discover-container .text-container .title-container .title h2 {
