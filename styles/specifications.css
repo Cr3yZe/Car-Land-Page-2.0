@@ -34,6 +34,7 @@
     border: 2px solid #DD0707;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 #specs .choose-container .choice-container div {
@@ -44,9 +45,16 @@
 }
 
 #specs .choose-container .choice-container i {
+    background-color: lightgrey;
+    border-radius: 50%;
     margin-right: 1em;
     transform: scale(2.5);
     align-self: center;
+    transition: 550ms;
+}
+
+#specs .choose-container .choice-container .rotate {
+    transform: scale(2.5) rotate(-90deg);
 }
 
 #specs .choose-container .all-choices {
@@ -55,7 +63,7 @@
     transition: 550ms ease-in-out;
 }
 
-#specs .choose-container .hidden {
+#specs .choose-container .menu-vissible {
     max-height: 24em;
 }
 
@@ -71,6 +79,11 @@
 
 #specs .choose-container .all-choices .choice:first-child {
     border-top: 1px solid #555;
+}
+
+#specs .choose-container .all-choices .choice:hover  {
+    background-color: lightgrey;
+    cursor: pointer;
 }
 
 #specs .specs-tables-container .specs-container h3 {
@@ -92,4 +105,49 @@
 
 #specs .specs-tables-container .specs-container .specification-container .row div {
     color: var(--text-color);
+}
+
+@media (min-width: 910px) {
+    #specs .choose-container .choice-container {
+        display: none;
+    }
+
+    #specs .choose-container .all-choices {
+        max-height: 10em;
+        display: flex;
+        gap: 1em;
+    }
+
+    #specs .choose-container .all-choices .choice {
+        border: none;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    #specs .choose-container .all-choices .choice::before {
+        content: '';
+        min-width: 100%;
+        height: 3px;
+        background-color: var(--main-color);
+        position: absolute;
+        bottom: 10px;
+        transform: var(--before);
+        transition: 450ms;
+    }
+
+    #specs .choose-container .all-choices .choice:hover {
+        background-color: inherit;
+     }
+
+    #specs .choose-container .all-choices .choice:first-child {
+        border-top: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    #specs .title-specs {
+        line-height: 3em;
+    }
 }

@@ -13,6 +13,7 @@
     --third-color: #000;
     --text-color: #333;
     --main-font: 'Poppins', sans-serif;
+    --before: translateX(-120%);
 }
 
 html {
