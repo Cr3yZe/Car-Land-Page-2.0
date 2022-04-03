@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 1; i < specs.length; i++) {
         specs[i].style.display = 'none';
     }
+
+    for (let i = 0; i <= 0; i++) {
+        choices[i].classList.add('active');
+    }
 })
 
 choose.addEventListener('click', () => {
@@ -47,12 +51,8 @@ list.addEventListener('click', (ev) => {
                 specs[i].style.display = 'none';
 
                 for (let i = 0; i < choices.length; i++) {
-                    choices[i].style.setProperty('--before', 'translateX(-120%)')
-                    target.style.setProperty('--before', 'translateX(0%)');
-
-                    setTimeout(() => {
-                        choices[i].style.setProperty('--before', 'translateX(-120%)')
-                    }, 500)
+                    choices[i].classList.remove('active');
+                    target.classList.add('active');
                 }
 
                 if (target.classList[2] === specs[i].classList[2]) {
