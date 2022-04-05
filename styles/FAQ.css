@@ -139,6 +139,7 @@
     padding: 1em 2em;
     display: flex;
     gap: 3em;
+    margin-bottom: 2em;
 }
 
 #our-team .staff .person .about-person .back-forth-container i {
@@ -152,4 +153,17 @@
 #our-team .staff .person .about-person .back-forth-container i:hover {
     background-color: var(--second-color);
     color: var(--main-color);
+    cursor: pointer;
+}
+
+#our-team .staff .btn-see-all {
+    font-weight: 800;
+    color: var(--second-color);
+    margin: auto;
+    transition: 650ms;
+}
+
+#our-team .staff .btn-see-all:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
