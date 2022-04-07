@@ -31,14 +31,14 @@
 
 #our-team .title-staff h2 {
     color: var(--second-color);
-    font-size: clamp(2.3em, 5vw, 6em);
+    font-size: clamp(2.3em, 5vw, 3.5em);
     text-transform: uppercase;
     z-index: 2;
 }
 
 #our-team .title-staff p {
     color: var(--second-color);
-    font-size: clamp(1.1em, 2vw, 1.8em);
+    font-size: clamp(1.1em, 2vw, 1.4em);
     text-align: center;
     z-index: 2;
 }
@@ -57,16 +57,21 @@
 }
 
 #our-team .staff .person .img-people-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+#our-team .staff .person .img-people-container .img-container {
     max-width: 15em;
     background-color: var(--second-color);
-    margin: 1em 0;
+    margin: auto;
     border-radius: 50%;
     padding: .8em;
     position: relative;
     justify-self: center;
 }
 
-#our-team .staff .person .img-people-container .quotes {
+#our-team .staff .person .img-people-container .img-container .quotes {
     min-width: 4em;
     min-height: 4em;
     background-color: var(--second-color);
@@ -80,15 +85,35 @@
     z-index: 2;
 }
 
-#our-team .staff .person .img-people-container .quotes i {
-    transform: scale(2.5);
+#our-team .staff .person .img-people-container .img-container .quotes i {
+    transform: scale(3);
 }
 
-#our-team .staff .person .img-people-container img {
+#our-team .staff .person .img-people-container .img-container img {
     min-height: 12em;
     min-width: 12em;
     border-radius: 50%;
     transform: translateY(.7em) translateX(.3em);
+}
+
+#our-team .staff .person .img-people-container .name-duty-container {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+#our-team .staff .person .img-people-container .name-duty-container h3 {
+    color: var(--second-color);
+    font-size: clamp(2em, 2.5vw, 2em);
+}
+
+#our-team .staff .person .img-people-container .name-duty-container h5 {
+    color: var(--second-color);
+    font-size: clamp(1.1em, 2vw, 1.3em);
+    font-weight: 300;
 }
 
 #our-team .staff .person .about-person {
@@ -102,8 +127,11 @@
 }
 
 #our-team .staff .person .about-person .text-about-container {
-    /* border: 1px solid white; */
+    min-height: 22em; 
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #our-team .staff .person .about-person .text-about-container p {
@@ -111,28 +139,10 @@
     text-align: center;
     font-family: var(--quotes-font);
     font-style: italic;
-    font-size: clamp(1.1em, 1.5vw, 1.5em);
+    font-size: clamp(1.1em, 1vw, 1.5em);
     font-weight: 300;
     line-height: 1.5em;
     letter-spacing: 2px;
-}
-
-#our-team .staff .person .about-person .name-duty-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#our-team .staff .person .about-person .name-duty-container h3 {
-    color: var(--second-color);
-    font-size: clamp(2em, 2.5vw, 3em);
-}
-
-#our-team .staff .person .about-person .name-duty-container h5 {
-    color: var(--second-color);
-    font-size: clamp(1.1em, 2vw, 1.3em);
-    font-weight: 300;
 }
 
 #our-team .staff .back-forth-container {
@@ -169,13 +179,29 @@
 }
 
 @media (min-width: 400px) {
-    #our-team .staff .person .img-people-container {
+    #our-team .staff .person .img-people-container .img-container {
         min-width: 15em;
         max-height: 15.5em;
     }
 
-    #our-team .staff .person .img-people-container img {
+    #our-team .staff .person .img-people-container .img-container img {
         min-width: 100%;
+    }
+
+    #our-team .staff .person .about-person .text-about-container {
+        min-height: 17em;
+    }
+}
+
+@media (min-width: 500px) {
+    #our-team .staff .person .about-person .text-about-container {
+        min-height: 10em;
+    }
+}
+
+@media (min-width: 600px) {
+    #our-team .staff .person .about-person .text-about-container {
+        min-height: 14em;
     }
 }
 
@@ -183,21 +209,26 @@
     #our-team .staff .person {
         display: grid;
         grid-template-columns: auto 1fr;
+        grid-template-rows: none;
+        gap: 4em;
     }
 
     #our-team .staff .person .img-people-container {
-        align-self: center;
+        margin-left: 4em;
     }
 
-    #our-team .staff .back-forth-container {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
+    #our-team .staff .person .about-person .text-about-container {
+        min-height: 16em;
     }
 }
 
 @media (min-width: 1000px) {
     #our-team .staff .person {
         max-width: 50em;
+        /* max-height: 30em; */
+    }
+
+    #our-team .staff .person .about-person .text-about-container {
+        min-height: 25em;
     }
 }

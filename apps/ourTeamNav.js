@@ -1,6 +1,5 @@
 const allTeam = document.getElementsByClassName('person');
-const btnContainer = document.querySelector('.back-forth-container');
-console.log(btnContainer);
+const staff = document.getElementById('staff');
 
 let lastIndex = 0;
 
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }    
 });
 
-btnContainer.addEventListener('click', (ev) => {
+staff.addEventListener('click', (ev) => {
     let target = ev.target;
 
     if (target.classList.contains('bx-left-arrow-alt')) {
