@@ -1,5 +1,7 @@
 #dealer {
     position: relative;
+    padding: .5em;
+    margin-bottom: 3em;
 }
 
 #dealer-id {
@@ -7,4 +9,158 @@
     top: -5em;
     width: 5em;
     height: 5em;
+}
+
+#dealer .title-dealer {
+    margin-bottom: 1.5em;
+}
+
+#dealer .title-dealer h2 {
+    font-size: clamp(2em, 4vw, 3em);
+    text-transform: uppercase;
+}
+
+#dealer .title-dealer p {
+    font-size: clamp(1.1em, 2vw, 1.5em);
+    color: var(--text-color);
+}
+
+#dealer .location-container {
+    padding: .2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#dealer .location-container .choose-location-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#dealer .location-container .shape {
+    padding: .7em;
+}
+
+#dealer .location-container .shape .default-choice {
+    border: 2px solid gray;
+    border-radius: 10% / 60%;
+    padding: .5em;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice:hover {
+    cursor: pointer;
+}
+
+#dealer .location-container .shape .default-choice span{
+    margin-left: 1em;
+    font-size: clamp(1.2em, 1vw, 1.6em);
+    color: var(--text-color);
+}
+
+#dealer .location-container .shape .default-choice i {
+    transform: scale(2);
+    margin-right: .5em;
+    transition: 250ms;
+}
+
+#dealer .location-container .shape .default-choice .rotate {
+    transform: rotate(-90deg) scale(2);
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .select-choice {
+    background-color: var(--second-color);
+    min-width: 100%;
+    max-height: 16em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #999;
+    overflow: hidden;
+    opacity: 1;
+    position: absolute;
+    top: 104%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: 250ms ease;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .countries-container {
+    z-index: 10;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .states-container {
+    z-index: 9;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .cities-container {
+    z-index: 8;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .select-choice .choice-dealer {
+    display: block;
+}
+
+#dealer .location-container .choose-location-container .shape .default-choice .hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+#dealer .location-container .select-choice div {
+    padding: .3em 1.4em;
+    font-size: clamp(1.4em, 2vw, 1.8em);
+}
+
+#dealer .location-container .select-choice div:hover {
+    background-color: lightgray;
+}
+
+#dealer .location-container .btn-submit {
+    background-color: var(--third-color);
+    border: 3px solid var(--third-color);
+    color: var(--second-color);
+    font-weight: 600;
+    transition: 550ms;
+    align-self: center;
+}
+
+#dealer .location-container .btn-submit:hover {
+    background-color: var(--second-color);
+    color: var(--third-color);
+}
+
+@media (min-width: 350px) {
+    #dealer .location-container .shape .default-choice {
+        max-width: 20em;
+        margin: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    #dealer .location-container .shape .default-choice {
+        min-width: 15em
+    }
+
+    #dealer .location-container .choose-location-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1100px) {
+    #dealer .location-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #dealer .location-container .btn-submit {
+        margin-top: 0;
+    }
 }
