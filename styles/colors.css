@@ -14,7 +14,7 @@
     line-height: 2em;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 #colors .title-colors-container h3 {
@@ -149,6 +149,12 @@
     
     #colors .car-colors-container .car-container .right-arrow {
         right: 3em;
+    }
+}
+
+@media (min-width: 1100px) {
+    #colors .title-colors-container {
+        gap: clamp(1.5em, 5vw, 1.7em);
     }
 }
 
