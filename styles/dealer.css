@@ -63,8 +63,10 @@
 }
 
 #dealer .location-container .shape .default-choice i {
-    transform: scale(2);
     margin-right: .5em;
+    background-color: lightgray;
+    border-radius: 50%;
+    transform: scale(2);
     transition: 250ms;
 }
 
@@ -75,7 +77,7 @@
 #dealer .location-container .choose-location-container .shape .default-choice .select-choice {
     background-color: var(--second-color);
     min-width: 100%;
-    max-height: 16em;
+    max-height: 18em;
     border-radius: 5px;
     box-shadow: 3px 3px 5px 2px #999;
     overflow: hidden;
@@ -133,6 +135,7 @@
 #dealer .location-container .btn-submit:hover {
     background-color: var(--second-color);
     color: var(--third-color);
+    cursor: pointer;
 }
 
 @media (min-width: 350px) {
