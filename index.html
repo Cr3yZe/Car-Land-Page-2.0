@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/dealer.css">
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/buttons style.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
     <header id="header">
@@ -601,73 +602,121 @@
         </section>
     </main>
     <footer id="footer">
-        <section class="about-us">
-            <h3>About us</h4>
-            <i class='logo bx bx-desktop'></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit omnis dignissimos iure a corrupti dicta mollitia voluptates assumenda vel! Minima?</p>
-        </section>
-        <section class="contact-info">
-            <h3>Contact Info</h4>
-            <div class="phone">
-                <i class='bx bxs-phone' ></i>
-                <h4>Phone</h4>
-                <h5>0723-352-653</h5>
-            </div>
-            <div class="email">
-                <i class='bx bxs-envelope' ></i>
-                <h4>Email</h4>
-                <h5>pc_land@gmail.com</h5>
-            </div>
-            <div class="address">
-                <i class='bx bxs-map' ></i>
-                <h4>Adress</h4>
-                <h5>3892 Fincham Road, Los Angeles, CA 90017</h5>
-            </div>
-        </section>
-        <section class="useful-links">
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>About</h5>
-            </div>
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>Innovative Design</h5>
-            </div>
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>Variations</h5>
-            </div>
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>Specials</h5>
-            </div>
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>Testimonials</h5>
-            </div>
-            <div>
-                <i class='bx bx-chevron-right-circle'></i>
-                <h5>Book Ride</h5>
-            </div>
-        </section>
-        <section class="subscribe-follow">
-            <div class="subscribe">
-                <h3>subscribe</h3>
-                <form action="">
-                    <input type="email" id="email" name="email" placeholder="Enter your email address">
-                    <input type="submit" id="submit-btn" name="submit-btn" value="Submit">
-                </form>
-            </div>
-            <div class="follow">
-                <h3>Follow us</h3>
-                <i class='bx bxl-facebook-circle' ></i>
-                <i class='bx bxl-twitter' ></i>
-                <i class='bx bxl-youtube' ></i>
-            </div>
-        </section>
-        <section class="copyright">
-            <i class='bx bx-copyright'></i>
-            <h5>2022 Car Land. Design & Development by Car Land Team</h5>
+        <section class="footer-container">
+            <section class="about-us">
+                <div class="title-icon">
+                    <h3>About us</h3>
+                    <i class='bx bxs-car'></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit omnis dignissimos iure a corrupti dicta mollitia voluptates assumenda vel! Minima?</p>
+            </section>
+            <section class="useful-links">
+                <div class="title-useful-links">
+                    <h4>Useful Links</h4>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>About</h5>
+                    </a>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>Innovative Design</h5>
+                    </a>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>Variations</h5>
+                    </a>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>Specials</h5>
+                    </a>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>Testimonials</h5>
+                    </a>
+                </div>
+                <div class="link-container">
+                    <i class='bx bx-chevron-right-circle'></i>
+                    <a href="#">
+                        <h5>Book Ride</h5>
+                    </a>
+                </div>
+            </section>
+            <section class="contact-info">
+                <h3>Contact Info</h3>
+                <div class="phone">
+                    <div class="icon-container">
+                        <i class='bx bxs-phone'></i>
+                    </div>
+                    <div class="details-container">
+                        <h4>Phone</h4>
+                        <h5>0723-352-653</h5>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="icon-container">
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+                    <div class="details-container">
+                        <h4>Email</h4>
+                        <h5>your_car@gmail.com</h5>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="icon-container">
+                        <i class='bx bxs-map'></i>
+                    </div>
+                    <div class="details-container">
+                        <h4>Adress</h4>
+                        <h5>3892 Fincham Road, Los Angeles, CA 90017</h5>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe-follow">
+                <div class="subscribe">
+                    <div class="title-subscribe">
+                        <h3>Subscribe</h3>
+                    </div>
+                    <div class="form-container">
+                        <form action="">
+                            <input type="email" id="email" name="email" placeholder="Enter your email address">
+                            <div class="submit-button">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="follow">
+                    <div class="title-follow-container">
+                        <h3>Follow us</h3>
+                    </div>
+                    <div class="follow-icons-container">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://twitter.com/?lang=en" target="_blank">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <i class='bx bxl-youtube' ></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="copyright">
+                <div class="copyright-container">
+                    <h5>© 2022 Car Land. Design & Development by Car Land Team</h5>
+                </div>
+            </section>
         </section>
     </footer>
     <script src="apps/variables.js"></script>
