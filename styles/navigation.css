@@ -41,6 +41,7 @@
 }
 
 #navigation #btn-menu-toggle {
+    min-height: 30px;
     padding: 10px;
     margin: 0 1.5em 0 auto;
     display: flex;
@@ -55,7 +56,7 @@
     z-index: 1000;
 }
 
-#navigation #btn-menu-toggle 
+#navigation #btn-menu-toggle
 .up,
 .middle,
 .down {
@@ -63,29 +64,23 @@
     border: 2px solid var(--main-color);
     background: var(--main-color);
     transition: 450ms;
+    /* -webkit-transition: 450ms; */
     user-select: none;
     z-index: 999;
 }
 
 .middle-hide {
-    transform: scale(0, 1);
+    transform: scale(0, 0);
+    opacity: 0;
     transform-origin: left;
-    -webkit-transform: scale(0, 1);
-    -webkit-transform-origin: left;
 }
 
 .up-rotate {
-    transform: rotate(45deg);
-    transform-origin: left;
-    -webkit-transform: rotate(45deg);
-    -webkit-transform-origin: left;
+    transform: rotate(-315deg) translate(5px, 11px);
 }
 
 .down-rotate {
-    transform: rotate(-45deg);
-    transform-origin: left;
-    -webkit-transform: rotate(-45deg);
-    -webkit-transform-origin: left;
+    transform: rotate(315deg) translate(3px, -9px);
 }
 
 #navigation #logo #menu {
@@ -207,24 +202,25 @@
 .down {
     width: 29px;
     border: 2px solid var(--main-color);
+    border-radius: 10% / 60%;
     background: var(--main-color);
     transition: 450ms;
+    -moz-transition: 450ms;
     user-select: none;
 }
 
 .middle-hide-fixed {
-    transform: scale(0, 1);
+    transform: scale(0, 0);
+    opacity: 0;
     transform-origin: left;
 }
 
 .up-rotate-fixed {
-    transform: rotate(45deg);
-    transform-origin: left;
+    transform: rotate(-315deg) translate(5px, 11px);
 }
 
 .down-rotate-fixed {
-    transform: rotate(-45deg);
-    transform-origin: left;
+    transform: rotate(315deg) translate(3px, -9px);
 }
 
 #navigation-fixed #logo-fixed #menu-fixed {
