@@ -67,10 +67,6 @@
     z-index: 999;
 }
 
-#navigation #btn-menu-toggle .middle {
-    position: absolute;
-}
-
 .middle-hide {
     transform: scale(0, 1);
     transform-origin: left;
