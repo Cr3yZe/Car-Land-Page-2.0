@@ -6,9 +6,11 @@ showPhoto(lastImage);
 arrowsContainer.addEventListener('click', (ev) => {
     let target = ev.target;
 
-    if (target.classList.contains('left-arrow')) {
+    if (target.classList.contains('left-arrow-container') ||
+        target.classList.contains('left-arrow')) {
         lastImage += -1;
-    } else if (target.classList.contains('right-arrow')) {
+    } else if (target.classList.contains('right-arrow-container') ||
+               target.classList.contains('right-arrow')) {
         lastImage += 1;
     }
 
