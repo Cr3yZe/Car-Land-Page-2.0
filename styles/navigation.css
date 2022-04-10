@@ -74,8 +74,7 @@
 }
 
 .middle-hide {
-    transform: scale(0, 0);
-    transform-origin: left;
+    transform: scale(0, 1);
 }
 
 .up-rotate {
@@ -208,22 +207,21 @@
     border-radius: 10% / 60%;
     background: var(--main-color);
     transition: 450ms;
+    transform-origin: left;
     -moz-transition: 450ms;
     user-select: none;
 }
 
 .middle-hide-fixed {
-    transform: scale(0, 0);
-    opacity: 0;
-    transform-origin: left;
+    transform: scale(0, 1);
 }
 
 .up-rotate-fixed {
-    transform: rotate(-315deg) translate(5px, 11px);
+    transform: rotate(45deg);
 }
 
 .down-rotate-fixed {
-    transform: rotate(315deg) translate(3px, -9px);
+    transform: rotate(-45deg);
 }
 
 #navigation-fixed #logo-fixed #menu-fixed {
