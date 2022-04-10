@@ -70,16 +70,22 @@
 .middle-hide {
     transform: scale(0, 1);
     transform-origin: left;
+    -webkit-transform: scale(0, 1);
+    -webkit-transform-origin: left;
 }
 
 .up-rotate {
     transform: rotate(45deg);
     transform-origin: left;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: left;
 }
 
 .down-rotate {
     transform: rotate(-45deg);
     transform-origin: left;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: left;
 }
 
 #navigation #logo #menu {
