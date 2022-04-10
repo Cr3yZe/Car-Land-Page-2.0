@@ -14,12 +14,23 @@
 
 #home .img-car-container {
     width: 100%;
+    position: relative;
+}
+
+#home .img-car-container::after {
+    content: '';
+    min-width: 100%;
+    min-height: 50%;
+    background: linear-gradient(to bottom, transparent 1%, #263633 30%);
+    position: absolute;
+    left: 0;
+    bottom: -25%;
 }
 
 #home .img-car-container .home-img {
     width: 100%;
-    mask-image: linear-gradient(to top, transparent, #263633);
 }
+
 
 #home .container {
     min-height: 20em;
