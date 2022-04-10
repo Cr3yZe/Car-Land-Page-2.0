@@ -67,6 +67,7 @@
     transition: 450ms;
     transform-origin: left;
     user-select: none;
+    -webkit-user-select: none;
     z-index: 999;
 }
 
