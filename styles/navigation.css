@@ -62,6 +62,7 @@
 .down {
     width: 29px;
     border: 2px solid var(--main-color);
+    border-radius: 10% / 60%;
     background: var(--main-color);
     transition: 450ms;
     /* -webkit-transition: 450ms; */
