@@ -65,23 +65,22 @@
     border-radius: 10% / 60%;
     background: var(--main-color);
     transition: 450ms;
-    /* -webkit-transition: 450ms; */
+    transform-origin: left;
     user-select: none;
     z-index: 999;
 }
 
 .middle-hide {
     transform: scale(0, 0);
-    opacity: 0;
     transform-origin: left;
 }
 
 .up-rotate {
-    transform: rotate(-315deg) translate(5px, 11px);
+    transform: rotate(45deg);
 }
 
 .down-rotate {
-    transform: rotate(315deg) translate(3px, -9px);
+    transform: rotate(-45deg);
 }
 
 #navigation #logo #menu {
