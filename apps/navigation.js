@@ -10,6 +10,7 @@ function allNavigationFunctions () {
     hiddeMenuWhenClicked();
     closeMenu();
     closeMenuFixed();
+    observeSections();
 
     // Reload the page when the logo icon or logo name is clicked. It is applied for the main navigation and for the fixed one.
     function reloadPage () {
@@ -390,4 +391,49 @@ function allNavigationFunctions () {
                 }
             }
         })
+
+    function observeSections () {
+        const sections = Array.from(document.querySelectorAll('.section'));
+
+        const navItems = {
+            header: document.getElementById('home-fixed'),
+            features: document.getElementById('features-fixed'),
+            colors: document.getElementById('variation-fixed'),
+            specs: document.getElementById('technical-fixed'),
+            team: document.getElementById('team-fixed'),
+            dealer: document.getElementById('dealer-fixed')
+        }
+
+        observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        }
+
+        function observerFunction(entries) {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+                    let navItem = navItems[entry.target.id];
+                    navItem.children[0].classList.add('underlined');
+                    Object.values(navItems).forEach((objectNavItem) => {
+                        if (objectNavItem != navItem) {
+                            objectNavItem.children[0].classList.remove('underlined')
+                        }
+                    })
+                }
+            })
+        }
+
+        const observer = new IntersectionObserver(observerFunction, observerOptions);
+        
+        window.addEventListener('scroll', (lastScrollHeight) => {
+            if (lastScrollHeight = window.scrollY) {
+                sections.forEach((section) => {
+                    observer.observe(section);
+                })
+            }
+            
+            lastScrollHeight = window.scrollY;
+        })
+    }
 }

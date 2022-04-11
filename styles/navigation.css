@@ -355,6 +355,7 @@
     #navigation #logo #menu li a {
         padding: 0;
         position: relative;
+        overflow: hidden;
     }
 
     #navigation #logo #menu li:hover {
@@ -367,17 +368,22 @@
 
     #navigation #logo #menu li a::before {
         content: '';
-        min-width: 100%;
-        border: 2px solid red;
+        width: 0;
+        border: 2px solid var(--main-color);
         position: absolute;
         bottom: 0;
-        transform: scale(0, 1);
-        transform-origin: left;
-        transition: 450ms;
+        right: -10px;
+        transition: 250ms;
+    }
+
+    #navigation #logo #menu .home a::before {
+        width: 100%;
+        left: 0;
     }
     
     #navigation #logo #menu li a:hover::before {
-        transform: scale(1, 1);
+        width: 100%;
+        left: 0;
     }
 
     #navigation #btn-menu-toggle {
@@ -422,6 +428,7 @@
         padding: 0;
         color: var(--third-color);
         position: relative;
+        overflow: hidden;
     }
 
     #navigation-fixed #logo-fixed #menu-fixed li:hover {
@@ -430,17 +437,32 @@
 
     #navigation-fixed #logo-fixed #menu-fixed li a::before {
         content: '';
-        min-width: 100%;
-        border: 2px solid red;
+        width: 0;
+        border: 2px solid var(--main-color);
         position: absolute;
         bottom: 0;
-        transform: scale(0, 1);
-        transform-origin: left;
-        transition: 450ms;
+        right: -10px;
+        transition: 250ms;
     }
     
     #navigation-fixed #logo-fixed #menu-fixed li a:hover::before {
-        transform: scale(1, 1);
+        width: 100%;
+        left: 0;
+    }
+
+    #navigation-fixed #logo-fixed #menu-fixed li a::after {
+        content: '';
+        width: 0;
+        border-bottom: 4px solid var(--main-color);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: 250ms;
+    }
+
+    #navigation-fixed #logo-fixed #menu-fixed li a.underlined::after {
+        width: 100%;
+        left: 0;
     }
 
     #navigation-fixed #btn-menu-toggle-fixed {
