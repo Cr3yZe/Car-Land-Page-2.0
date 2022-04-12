@@ -1,4 +1,5 @@
 const dealer = document.getElementById('dealer');
+const choiceBox = Array.from(document.getElementsByClassName('shape'));
 const choice = document.getElementsByClassName('default-choice');
 const choiceSelect = document.getElementsByClassName('select-choice');
 const allChoices = document.getElementsByClassName('choice-dealer');
@@ -9,10 +10,12 @@ const statesSelect = document.querySelector('.states-container');
 const citiesSelect = document.querySelector('.cities-container');
 const selectionArray = [countrySelect, statesSelect, citiesSelect];
 
+selectBox();
 
-dealer.addEventListener('click', () => {
-    for (let i = 0; i < choice.length; i++) {
-        choice[i].onclick = () => {
+function selectBox() {
+    for (let i = 0; i < choiceBox.length; i++) {
+        choiceBox[i].addEventListener('click', () => {
+            console.log(true);
             if(!choiceSelect[i].classList.contains('hidden')) {
                 choiceSelect[i].classList.add('hidden');
                 leftIcon[i].classList.remove('rotate');
@@ -24,9 +27,9 @@ dealer.addEventListener('click', () => {
                 choiceSelect[i].classList.toggle('hidden');
                 leftIcon[i].classList.toggle('rotate');
             }
-        }
+        })
     }
-})
+};
 
 dealer.addEventListener('click', (ev) => {
     let target = ev.target;
