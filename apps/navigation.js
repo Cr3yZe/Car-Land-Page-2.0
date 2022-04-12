@@ -407,7 +407,7 @@ function allNavigationFunctions () {
         observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.3
+            threshold: 0.4
         }
 
         function observerFunction(entries) {
