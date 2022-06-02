@@ -148,7 +148,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     user-select: none;
-    z-index: 999;
+    z-index: 99999;
 }
 
 .hidde-fixed {

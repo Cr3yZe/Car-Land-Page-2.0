@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/buttons style.css">
     <link rel="stylesheet" href="styles/footer.css">
 </head>
-<body>
+<body id="wrapper">
     <header id="header" class="section">
         <nav id="navigation">
             <div id="logo" class="check-logo">
@@ -182,18 +182,33 @@
                     <iframe width="100%" src="https://www.youtube.com/embed/cjFl6t3YfKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div id="slideshow" class="images-gallery-container">
-                    <img class="slideshow-image" src="Images/Car images/Resized photos/First2.png" loading="lazy" alt="BMW i4 Photo">
-                    <img class="slideshow-image" src="Images/Car images/Resized photos/First1.png" loading="lazy" alt="BMW i4 Photo">
-                    <img class="slideshow-image" src="Images/Car images/Resized photos/First3.png" loading="lazy" alt="BMW i4 Photo">
-                    <img class="slideshow-image" src="Images/Car images/Resized photos/Second1.jpg" loading="lazy" alt="BMW i4 Photo">
-                    <img class="slideshow-image" src="Images/Car images/Resized photos/Second3.jpg" loading="lazy" alt="BMW i4 Photo">
+                    <div id="slide-container" class="slide-show">
+                        <img id="last" class="slideshow-image" src="Images/Car images/Resized photos/Second3.jpg" alt="BMW i4 Photo">
+                        <img class="slideshow-image" src="Images/Car images/Resized photos/First2.png" alt="BMW i4 Photo">
+                        <img class="slideshow-image" src="Images/Car images/Resized photos/First1.png" alt="BMW i4 Photo">
+                        <img class="slideshow-image" src="Images/Car images/Resized photos/First3.png" alt="BMW i4 Photo">
+                        <img class="slideshow-image" src="Images/Car images/Resized photos/Second1.jpg" alt="BMW i4 Photo">
+                        <img class="slideshow-image" src="Images/Car images/Resized photos/Second3.jpg" alt="BMW i4 Photo">
+                        <img id="first" class="slideshow-image" src="Images/Car images/Resized photos/First2.png" alt="BMW i4 Photo">
+                    </div>
                     <div class="arrows-container">
                         <div class="left-arrow-container">
-                            <i class='left-arrow bx bx-chevron-left' ></i>
+                            <div class="circle-arrow">
+                                <i class='left-arrow bx bxs-chevrons-left'></i>
+                            </div>
                         </div>
                         <div class="right-arrow-container">
-                            <i class='right-arrow bx bx-chevron-right'></i>
+                            <div class="circle-arrow">
+                                <i class='right-arrow bx bxs-chevrons-right' ></i>
+                            </div>
                         </div>
+                    </div>
+                    <div id="numbers" class="numbers">
+                        <div class="1">1</div>
+                        <div class="2">2</div>
+                        <div class="3">3</div>
+                        <div class="4">4</div>
+                        <div class="5">5</div>
                     </div>
                 </div>
                 <div class="text-container">
