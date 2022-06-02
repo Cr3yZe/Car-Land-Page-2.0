@@ -256,9 +256,16 @@
     transition: 250ms;
 }
 
+#features .gallery-container .images-gallery-container .numbers div:nth-child(1) {
+    background-color: red;
+    color: white;
+    transform: scale(1.2);
+}
+
 #features .gallery-container .images-gallery-container .numbers div:hover {
     background-color: red;
     color: white;
+    transform: scale(1.2);
 }
 
 #features .gallery-container .text-container {
