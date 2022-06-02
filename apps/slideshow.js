@@ -9,13 +9,28 @@ const arrowRight = slideShowContainer.children[1].children[1];
 let counter = 1;
 let widthSize = images[0].clientWidth;
 
-console.log(imageNumbers);
+console.log(numbers);
 
 changeImage();
 
 window.addEventListener('resize', () => {
     widthSize = images[0].clientWidth;
     changeImage();
+})
+
+numbers.addEventListener('click', (ev) => {
+    counter = ev.target.innerHTML;
+
+    imageNumbers.forEach((item) => {
+        if (item.classList.contains('selected')) {
+            item.classList.toggle('selected');
+        }
+
+        if (counter === item.innerHTML) {
+            changeImage();
+            item.classList.toggle('selected');
+        }
+    })
 })
 
 arrowLeft.addEventListener('click', () => {
@@ -25,20 +40,16 @@ arrowLeft.addEventListener('click', () => {
         imageNumbers.forEach((item, index) => {
             imageNumbers.forEach((item, index) => {
                 if (counter === index+1) {
-                    item.style.transform = 'scale(1.2)';
-                    item.style.backgroundColor = 'red';
-                    item.style.color = 'white';
+                    item.classList.toggle('selected');
                 } else {
-                    item.style.transform = 'scale(1)';
-                    item.style.backgroundColor = 'white';
-                    item.style.color = 'black';
+                    if (item.classList.contains('selected')) {
+                        item.classList.toggle('selected');
+                    }
                 }
     
                 if (counter === 0) {
                     if (index === 4) {
-                        imageNumbers[4].style.transform = 'scale(1.2)';
-                        imageNumbers[4].style.backgroundColor = 'red';
-                        imageNumbers[4].style.color = 'white';
+                        imageNumbers[4].classList.toggle('selected');
                     }
                 }
             });
@@ -56,8 +67,7 @@ arrowLeft.addEventListener('click', () => {
             },550)
         }
     }
-
-    changeImage();
+    changeImage(counter);
 });
 
 arrowRight.addEventListener('click', () => {
@@ -66,20 +76,16 @@ arrowRight.addEventListener('click', () => {
 
         imageNumbers.forEach((item, index) => {
             if (counter === index+1) {
-                item.style.transform = 'scale(1.2)';
-                item.style.backgroundColor = 'red';
-                item.style.color = 'white';
+                item.classList.toggle('selected')
             } else {
-                item.style.transform = 'scale(1)';
-                item.style.backgroundColor = 'white';
-                item.style.color = 'black';
+                if (item.classList.contains('selected')) {
+                    item.classList.toggle('selected');
+                }
             }
 
             if (counter === 6) {
                 if (index+2 === 6) {
-                    imageNumbers[0].style.transform = 'scale(1.2)';
-                    imageNumbers[0].style.backgroundColor = 'red';
-                    imageNumbers[0].style.color = 'white';
+                    imageNumbers[0].classList.toggle('selected');
                 }
             }
         });
