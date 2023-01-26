@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;    
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -20,7 +20,7 @@
     --text-color: #333;
     --footer-text-color: #8C8C8C;
     --main-font: 'Poppins', sans-serif;
-    --quotes-font : 'BIZ UDPMincho', serif;
+    --quotes-font: 'BIZ UDPMincho', serif;
 }
 
 html {
@@ -35,4 +35,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2em;
+}
+
+@media (min-width: 1500px) {
+    body {
+        max-width: 80%;
+        margin: auto;
+    }
 }
